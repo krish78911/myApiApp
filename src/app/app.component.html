@@ -1,8 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon name="home"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">
+        Home
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/about']">
+        About Us
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/form']">
+        Add Product
       </ion-button>
     </ion-buttons>
     <ion-title>
@@ -12,19 +22,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let post of posts">
-      <ion-label>
-        <h2>{{ post.name }}</h2>
-        <p>{{ post.price }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-
-  <ion-footer>
-    <ion-toolbar color="primary">
-      <ion-title>Footer Content</ion-title>
-    </ion-toolbar>
-  </ion-footer>
+  <router-outlet></router-outlet>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title>Footer Content</ion-title>
+  </ion-toolbar>
+</ion-footer>
 
