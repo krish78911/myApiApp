@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   //private apiUrl = 'https://jsonplaceholder.typicode.com/posts'; // Sample API endpoint
-  private apiUrl = 'http://localhost/laravel-crud/public/api-get';
+  private apiUrl = 'http://localhost/laravel-crud/public/api/api-get';
 
   constructor(private http: HttpClient) {}
 
@@ -16,10 +16,5 @@ export class ApiService {
   getPosts(): Observable<any> {
     console.log('test');
     return this.http.get(this.apiUrl);
-  }
-
-  // Function to post data to the API (if needed)
-  createPost(postData: any): Observable<any> {
-    return this.http.post(this.apiUrl, postData);
   }
 }

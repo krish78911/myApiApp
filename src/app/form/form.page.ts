@@ -26,7 +26,7 @@ export class FormPage {
       console.log('Form Data:', formData);  // Log the form data
 
       // Send the form data to the Laravel controller via HTTP POST request
-      this.http.post('http://localhost/laravel-crud/public/api-post', formData)
+      this.http.post('http://localhost/laravel-crud/public/api/api-post', formData)
         .subscribe(
           response => {
             console.log('Response from server:', response);  // Handle success
